@@ -3,40 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pack-by-LED</title>
+  <title>Pack-by-LED | Logioo</title>
   <style>
     body {
       font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       margin: 0;
       background: #f8f9fb;
-      color: #222;
+      color: #1e293b;
       line-height: 1.6;
     }
+
     header {
       background: #0f172a;
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 3rem 1rem 2rem 1rem;
     }
+
+    header img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
+
+    header p {
+      margin: 0.5rem 0 0 0;
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
     main {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
+
     img {
       width: 100%;
       border-radius: 12px;
       margin: 2rem 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #0f172a;
       margin-top: 2rem;
+      border-left: 4px solid #38bdf8;
+      padding-left: 0.6rem;
     }
+
+    ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+    }
+
     footer {
       background: #0f172a;
       color: #fff;
@@ -44,20 +67,39 @@
       padding: 1.5rem;
       margin-top: 3rem;
     }
+
     a {
       color: #38bdf8;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Simple animated LED line */
+    .led-strip {
+      height: 6px;
+      background: linear-gradient(90deg, #22d3ee, #38bdf8, #22d3ee);
+      background-size: 200% 100%;
+      animation: flow 3s linear infinite;
+      margin-top: -6px;
+    }
+
+    @keyframes flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logioo.png" alt="Logioo logo">
     <h1>Pack-by-LED</h1>
     <p>Streamlining Warehouse Operations</p>
   </header>
+
+  <div class="led-strip"></div>
 
   <main>
     <img src="polaris.jpg" alt="Pack-by-LED system in warehouse">
@@ -94,7 +136,8 @@
   </main>
 
   <footer>
-    <p>Interested in more info? Contact <a href="mailto:info@logioo.be">info@logioo.be</a></p>
+    <p>Interested in more info? Contact <a href="mailto:info@logioo.eu">info@logioo.eu</a></p>
+    <p>© <script>document.write(new Date().getFullYear());</script> Logioo</p>
   </footer>
 </body>
 </html>
