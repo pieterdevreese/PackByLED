@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pack-by-LED | Logioo</title>
+  <link rel="icon" type="image/png" href="logioo.png">
   <style>
     body {
       font-family: 'Segoe UI', Roboto, Arial, sans-serif;
@@ -34,6 +35,19 @@
       margin: 0.5rem 0 0 0;
       color: #94a3b8;
       font-size: 1.1rem;
+    }
+
+    .led-strip {
+      height: 6px;
+      background: linear-gradient(90deg, #22d3ee, #38bdf8, #22d3ee);
+      background-size: 200% 100%;
+      animation: flow 3s linear infinite;
+      margin-top: -6px;
+    }
+
+    @keyframes flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
     }
 
     main {
@@ -77,18 +91,11 @@
       text-decoration: underline;
     }
 
-    /* Simple animated LED line */
-    .led-strip {
-      height: 6px;
-      background: linear-gradient(90deg, #22d3ee, #38bdf8, #22d3ee);
-      background-size: 200% 100%;
-      animation: flow 3s linear infinite;
-      margin-top: -6px;
-    }
-
-    @keyframes flow {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 3rem auto 4rem;
+      font-size: 1.15rem;
     }
   </style>
 </head>
@@ -96,47 +103,54 @@
   <header>
     <img src="logioo.png" alt="Logioo logo">
     <h1>Pack-by-LED</h1>
-    <p>Streamlining Warehouse Operations</p>
+    <p>Streamlining shipping operations</p>
   </header>
 
   <div class="led-strip"></div>
 
   <main>
-    <img src="polaris.jpg" alt="Pack-by-LED system in warehouse">
+    <div class="intro">
+      <p><strong>Pack-by-LED</strong> is a fast, visual way to guide warehouse operators during the packing process.  
+      Instead of buttons or complex screens, LEDs show what to pack next: simple, efficient, and plug & play.</p>
+    </div>
 
-    <h2>What it is</h2>
+    <img src="20250103_111336~2.jpg" alt="Pack-by-LED system in warehouse">
+
+    <h2>From Pick-by-Light to Pack-by-LED</h2>
     <p>
-      Pack-by-LED is a simple, visual system that guides warehouse operators during packing using LEDs.
-      Each LED indicates exactly which item to pack and when — reducing errors and speeding up the process.
+      Traditional pick-by-light systems rely on physical buttons at every location.  
+      We initially explored that approach but quickly found it not a suitable fit.  
+      During the packing process, operators already use a <strong>PDA or handheld scanner</strong>,  
+      so adding buttons only makes things slower and more expensive.
+    </p>
+    <p>
+      Pack-by-LED eliminates the button completely.  
+      The LEDs are controlled directly by the software, triggered by scan events or shipment status.  
+      This makes the system <strong>faster, cheaper, easier to install, and much more flexible</strong> than traditional pick-by-light systems.
     </p>
 
     <h2>Key Benefits</h2>
     <ul>
-      <li><strong>Faster Packing:</strong> Operators immediately see what to pack—no need to check screens or paperwork.</li>
-      <li><strong>Reduced Errors:</strong> Clear LED guidance minimizes mistakes.</li>
-      <li><strong>Intuitive & Easy:</strong> Works like a “traffic light” system for packing—minimal training required.</li>
-      <li><strong>Flexible & Scalable:</strong> Works for single or multi-item shipments and can adapt to any warehouse layout.</li>
-      <li><strong>Data Insights:</strong> Tracks performance, station utilization, and bottlenecks.</li>
+      <li><strong>Accuracy:</strong> One glance. Pack. Next.</li>
+      <li><strong>Speed:</strong> Instant LED feedback keeps operators moving without hesitation.</li>
+      <li><strong>Ease of use:</strong> Intuitive and easy to learn. No training needed.</li>
+      <li><strong>Plug & Play:</strong> Quick to install, no special hardware required.</li>
     </ul>
 
-    <h2>How it works (High-Level Tech)</h2>
+    <h2>How it works</h2>
     <ul>
-      <li><strong>Hardware:</strong> Affordable addressable LED strips connected to small Wi-Fi controllers.</li>
-      <li><strong>Network:</strong> Runs on standard Wi-Fi—no complex infrastructure required.</li>
-      <li><strong>Software:</strong> Lightweight controller app runs on a local server or standalone device.</li>
-      <li><strong>Integration:</strong> Connects to existing systems via database, API, or simple CSV files.</li>
-      <li><strong>Real-Time Control:</strong> LEDs update instantly based on shipment status—showing when an order is ready, packed, or shipped.</li>
-      <li><strong>Plug & Play:</strong> Quick setup, minimal wiring, and ready to use within minutes.</li>
+      <li>Uses <strong>addressable LED strips</strong> connected to small <strong>Wi-Fi controllers</strong>.</li>
+      <li>Controlled by a <strong>lightweight software service</strong> running on a local device or server.</li>
+      <li>Connects to <strong>databases, APIs or CSV exports</strong> from ERP or WMS systems.</li>
+      <li>LEDs update in real time based on shipment progress.</li>
+      <li>Hardware is <strong>low-cost, modular and easy to expand</strong>.</li>
     </ul>
 
-    <h2>Why it matters</h2>
-    <p>
-      Traditional packing relies on screens, scanners, or paperwork. Pack-by-LED replaces all that with one glance—faster, leaner, and more intuitive.
-    </p>
   </main>
 
   <footer>
-    <p>Interested in more info? Contact <a href="mailto:info@logioo.eu">info@logioo.eu</a></p>
+    <p>Interested to know more?<br>
+    Contact <a href="mailto:info@logioo.eu">info@logioo.eu</a></p>
     <p>© <script>document.write(new Date().getFullYear());</script> Logioo</p>
   </footer>
 </body>
