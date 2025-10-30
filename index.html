@@ -6,39 +6,31 @@
   <title>Pack-by-LED | Logioo</title>
   <link rel="icon" type="image/png" href="logioo.png">
   <style>
-  body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    margin: 0;
-    background: #f8f9fb;
-    color: #1e293b;
-    line-height: 1.6;
-  }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fb;
+      color: #1e293b;
+      line-height: 1.6;
+    }
 
-  header {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 2.5rem 1rem 2rem 1rem;
-  }
+    header {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem 1rem;
+    }
 
-  header img {
-    height: 60px;
-    width: auto;
-    max-width: 220px;
-    margin-bottom: 1rem;
-    object-fit: contain;
-  }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 2.4rem;
-  }
-
-  header p {
-    margin: 0.5rem 0 0 0;
-    color: #94a3b8;
-    font-size: 1.1rem;
-  }
+    header p {
+      margin: 0.5rem 0 0 0;
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
 
     .led-strip {
       height: 6px;
@@ -81,8 +73,15 @@
       background: #0f172a;
       color: #fff;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem 1rem;
       margin-top: 3rem;
+    }
+
+    footer img {
+      height: 60px;
+      width: auto;
+      margin-top: 1rem;
+      opacity: 0.9;
     }
 
     a {
@@ -100,13 +99,35 @@
       margin: 3rem auto 4rem;
       font-size: 1.15rem;
     }
+
+    .led-legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .led-color {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .led-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    .green { background: #22c55e; }
+    .blue { background: #3b82f6; }
+    .orange { background: #f97316; }
   </style>
 </head>
 <body>
   <header>
-    <img src="logioo.png" alt="Logioo logo">
     <h1>Pack-by-LED</h1>
-    <p>Streamlining shipping operations</p>
+    <p>Streamlining Warehouse Operations</p>
   </header>
 
   <div class="led-strip"></div>
@@ -114,30 +135,61 @@
   <main>
     <div class="intro">
       <p><strong>Pack-by-LED</strong> is a fast, visual way to guide warehouse operators during the packing process.  
-      Instead of buttons or complex screens, LEDs show what to pack next: simple, efficient, and plug & play.</p>
+      Instead of buttons or complex screens, LEDs show what to pack next — simple, efficient, and plug & play.</p>
     </div>
 
     <img src="polaris.jpg" alt="Pack-by-LED system in warehouse">
 
+    <h2>The Challenge</h2>
+    <p>
+      In many warehouses, <strong>picking is done across multiple zones</strong>.  
+      Before shipping, all items must be <strong>consolidated into one shipment</strong>.
+      At the same time, there are <strong>different cut-off and shipping times</strong> depending on the customer, destination and carrier.
+    </p>
+    <p>
+      Operators currently have to check <strong>small PDA or handheld scanner screens</strong> to see which shipments are complete and ready for packing.  
+      This means searching through racks and lists before actually starting to pack and ship — a time-consuming and error-prone process.
+    </p>
+
+    <h2>The Solution</h2>
+    <p>
+      With Pack-by-LED, operators no longer have to check screens.  
+      When all items for a shipment are present in the rack, <strong>the LEDs light up automatically</strong>.
+    </p>
+    <p>
+      The <strong>color of the LED</strong> indicates the <strong>cut-off time</strong> or shipping priority:
+    </p>
+
+    <div class="led-legend">
+      <div class="led-color"><div class="led-dot green"></div> Green – immediate shipment</div>
+      <div class="led-color"><div class="led-dot blue"></div> Blue – standard shipment</div>
+      <div class="led-color"><div class="led-dot orange"></div> Orange – later cut-off</div>
+    </div>
+
+    <p>
+      This allows operators to instantly see which shipments are ready and what to prioritize —  
+      no searching, no scanning, no delays.
+    </p>
+
     <h2>From Pick-by-Light to Pack-by-LED</h2>
     <p>
       Traditional pick-by-light systems rely on physical buttons at every location.  
-      We initially explored that approach but quickly found it not a suitable fit.  
-      During the packing process, operators already use a <strong>PDA or handheld scanner</strong>,  
-      so adding buttons only makes things slower and more expensive.
+      We initially explored that approach but found it unnecessary.  
+      During the packing process, operators already use a <strong>PDA or handheld scanner</strong>, so adding buttons only makes things slower and more expensive.
     </p>
     <p>
       Pack-by-LED eliminates the button completely.  
-      The LEDs are controlled directly by the software, triggered by scan events or shipment status.  
-      This makes the system <strong>faster, cheaper, easier to install, and much more flexible</strong> than traditional pick-by-light systems.
+      The LEDs are controlled directly by the packing software, triggered by scan events or shipment status.  
+      This makes the system <strong>faster, cheaper, easier to install, and much more flexible</strong> than traditional hardware.
     </p>
 
     <h2>Key Benefits</h2>
     <ul>
-      <li><strong>Accuracy:</strong> One glance. Pack. Next.</li>
-      <li><strong>Speed:</strong> Instant LED feedback keeps operators moving without hesitation.</li>
-      <li><strong>Ease of use:</strong> Intuitive and easy to learn. No training needed.</li>
-      <li><strong>Plug & Play:</strong> Quick to install, no special hardware required.</li>
+      <li><strong>Speed:</strong> Immediate LED feedback keeps operators moving efficiently.</li>
+      <li><strong>Accuracy:</strong> Each LED represents an action. Less confusion, fewer returns.</li>
+      <li><strong>Ease of use:</strong> Intuitive and easy to learn. No extra hardware or training required.</li>
+      <li><strong>Scalability:</strong> Works for one packing table or an entire warehouse.</li>
+      <li><strong>Plug & Play:</strong> Quick to install, no special infrastructure needed.</li>
     </ul>
 
     <h2>How it works</h2>
@@ -149,11 +201,18 @@
       <li>Hardware is <strong>low-cost, modular and easy to expand</strong>.</li>
     </ul>
 
+    <h2>Why companies like it</h2>
+    <p>
+      Pack-by-LED bridges the gap between digital systems and physical work.  
+      It brings visual clarity and speed to packing operations while keeping hardware simple and affordable.  
+      Many warehouses start small and quickly expand once they see the impact.
+    </p>
   </main>
 
   <footer>
-    <p>Interested to know more?<br>
+    <p>Interested to learn how it could fit your warehouse?<br>
     Contact <a href="mailto:info@logioo.eu">info@logioo.eu</a></p>
+    <img src="logioo.png" alt="Logioo logo">
     <p>© <script>document.write(new Date().getFullYear());</script> Logioo</p>
   </footer>
 </body>
